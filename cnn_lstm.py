@@ -35,7 +35,7 @@ def df_X_y(df, window_size=7):
   X = []
   y = []
   for i in range(len(df_s)-window_size):
-    row = [r for r in df_s[i:i+window_size]]
+    row = list(df_s[i:i+window_size])
     X.append(row)
     label = [df_s[i+window_size][3]]
     y.append(label)
